@@ -6,9 +6,5 @@ The equations are:
 
 > x = sin(angle) \* velocity * t
 
-> y = cos(angle) \* velocity \* t - ( 0.5 \* 9.8 * t<sup>2</sup>)
-
-Write a Java program to compute the answer. You have 10 minutes you should not need more than 4.
-
----
+> y = cos(angle) \* velocity \* t - ( ½ \* 9.8 * t<sup>2</sup>)
 
