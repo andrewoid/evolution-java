@@ -4,7 +4,7 @@ During a baseball game a batter hits the ball at a 31 degree angle with a veloci
 
 The equations are:
 
-> x = sin(angle) \* velocity * t
+> x = sin(angle) \* velocity * time
 
-> y = cos(angle) \* velocity \* t - ( ½ \* 9.8 * t<sup>2</sup>)
+> y = cos(angle) \* velocity \* ttime - ( ½ \* 9.8 * time<sup>2</sup>)
 
