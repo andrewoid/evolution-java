@@ -1,5 +1,5 @@
 # Summary
 
 * [Introduction](README.md)
-* Warmup Challenge
+* [Warmup Challenge](warmup_challenge.md)
 
