@@ -3,5 +3,5 @@
 * [Introduction](README.md)
 * [Warmup Challenge](warmup_challenge.md)
 * [Warmup Challenge Analysis](warmup_challenge_analysis.md)
-* Swing GUI Tutorial
+* [Swing GUI Tutorial](swing_gui_tutorial.md)
 
