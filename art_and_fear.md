@@ -1,4 +1,3 @@
-
 ### Art and Fear
 
 This is a excerpt from the book [Art and Fear](http://www.amazon.com/Art-Fear-Observations-Rewards-Artmaking/dp/0961454733)
