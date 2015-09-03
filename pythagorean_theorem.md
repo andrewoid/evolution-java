@@ -17,4 +17,7 @@ Create a class called PythagoreanTheorem.
          */
         public void setAB() { ... }
     
+        public double getA() { ... }
+        public double getB() { ... }
+        public double getC() { ... }
     }
