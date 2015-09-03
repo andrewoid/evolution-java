@@ -6,6 +6,6 @@
 * [Projectile Answer](projectile_answer.md)
 * [Unit Tests](unit_tests.md)
 * [Quadratic Equation](quadratic_equation.md)
-* [Pythagorean Theorem](pythagorean_theorum.md)
+* [Pythagorean Theorem](pythagorean_theorem.md)
 * [The Rules](the_rules.md)
 
