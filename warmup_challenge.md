@@ -1,6 +1,6 @@
 # Projectile
 
-During a baseball game a batter hits the ball at a 31 degree angle with a velocity of 20 meters/second. What is the location of the ball after 3.7 seconds.
+During a baseball game a batter hits the ball at a 31 degree angle with a velocity of 20 meters/second. What is the location of the ball after 2.7 seconds.
 
 The equations are:
 
