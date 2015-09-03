@@ -17,5 +17,4 @@ Create a class called PythagoreanTheorem.
          */
         public void setAB() { ... }
     
-    
     }
