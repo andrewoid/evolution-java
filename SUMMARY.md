@@ -4,5 +4,5 @@
 * [Projectile](projectile.md)
 * [Projectile Answer](projectile_answer.md)
 * [Unit Tests](unit_tests.md)
-* The Rules
+* [The Rules](the_rules.md)
 
