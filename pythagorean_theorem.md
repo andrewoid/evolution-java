@@ -1,5 +1,7 @@
 ### Pythagorean Theorem
 
+![](pythagoras-theorem.gif)
+
 Create a class called PythagoreanTheorem.
 
     public class PythagoreanTheorem {
