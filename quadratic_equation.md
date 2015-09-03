@@ -14,3 +14,5 @@ Create a class called QuadraticEquation
     }
     
 Create a class called QuadraticEquationTest and write two tests to test the getPositiveX() and getNegativeX() methods. 
+
+What should happen if a == 0 or b == 0?
