@@ -2,7 +2,7 @@
 
 Create a class called PythagoreanTheorem.
 
-    class PythagoreanTheorem {
+    public class PythagoreanTheorem {
     
         /**
          *  Sets the value of A and B and computes C
