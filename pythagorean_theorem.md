@@ -9,13 +9,13 @@ Create a class called PythagoreanTheorem.
          */
         public void setAB() { ... }
         /**
-         *  Sets the value of A and B and computes C
+         *  Sets the value of A and C and computes B
          */
-        public void setAB() { ... }
+        public void setAC() { ... }
         /**
-         *  Sets the value of A and B and computes C
+         *  Sets the value of B and C and computes A
          */
-        public void setAB() { ... }
+        public void setBC() { ... }
     
         public double getA() { ... }
         public double getB() { ... }
