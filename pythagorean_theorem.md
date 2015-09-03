@@ -21,3 +21,5 @@ Create a class called PythagoreanTheorem.
         public double getB() { ... }
         public double getC() { ... }
     }
+    
+Write a class called PythagoreanTheoremTest with three unit tests that test the setAB(), setAC() and setBC() methods.
