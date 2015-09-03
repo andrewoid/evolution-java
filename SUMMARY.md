@@ -1,7 +1,7 @@
 # Summary
 
 * [Introduction](README.md)
-* [Warmup Challenge](warmup_challenge.md)
+* [Projectile](projectile.md)
 * [Warmup Challenge Analysis](warmup_challenge_analysis.md)
 * [Unit Tests](unit_tests.md)
 
