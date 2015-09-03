@@ -7,4 +7,5 @@
 * [Unit Tests](unit_tests.md)
 * [Quadratic Equation](quadratic_equation.md)
 * [The Rules](the_rules.md)
+* Pythagorean Theorum
 
