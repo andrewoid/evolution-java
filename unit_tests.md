@@ -59,7 +59,7 @@ Each method in ProjecileTest that is annotated with @Test is one unit test. Each
 
 The [Assert](http://junit.org/apidocs/org/junit/Assert.html) class is used to test the results of code. The assert methods check a certain condition. In this case the condition is that the first a second parameter to .assertEquals() are equal to each other. Consult the javadocs for a list of available assert methods. If the assert fails, then an Exception is thrown and the test is marked as a failure.
 
-(When comparing doubles in Java it is important to allow for small errors in calculation. The [assertEquals](http://junit.org/apidocs/org/junit/Assert.html#assertEquals(double, double, double)) for doubles adds a "delta" parameter at the end to specify the range between the two numbers by which they could still be considered equal.)
+(When comparing doubles in Java it is important to allow for small errors in calculation. The [assertEquals](http://junit.org/apidocs/org/junit/Assert.html#assertEquals(double, double, double%29) for doubles adds a "delta" parameter at the end to specify the range between the two numbers by which they could still be considered equal.)
 
 Here is a good tutorial on JUnit.
 http://www.vogella.com/tutorials/JUnit/article.html
