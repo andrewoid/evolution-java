@@ -5,6 +5,6 @@
 * [Projectile](projectile.md)
 * [Projectile Answer](projectile_answer.md)
 * [Unit Tests](unit_tests.md)
-* [The Rules](the_rules.md)
 * Quadratic Equation
+* [The Rules](the_rules.md)
 
