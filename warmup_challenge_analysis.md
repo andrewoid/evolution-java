@@ -6,7 +6,7 @@ Projectile math is the typically the first topic in any physics course. The corr
 
 Did you get the correct answer? 
 
-A common error is that you don't know how to use  [Math.sin()](http://docs.oracle.com/javase/7/docs/api/java/lang/Math.html#sin(double) and [Math.cos()](http://docs.oracle.com/javase/7/docs/api/java/lang/Math.html#cos(double) correctly. If you read the linked javadocs carefully you'll see that the those methods take an angle in **radians** not degrees.
+A common error is that you don't know how to use  [Math.sin()](http://docs.oracle.com/javase/7/docs/api/java/lang/Math.html#sin(double%29) and [Math.cos()](http://docs.oracle.com/javase/7/docs/api/java/lang/Math.html#cos(double%29) correctly. If you read the linked javadocs carefully you'll see that the those methods take an angle in **radians** not degrees.
 
 The "correct" program is something like this:
 
