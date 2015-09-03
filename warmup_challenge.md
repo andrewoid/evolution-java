@@ -6,5 +6,5 @@ The equations are:
 
 > x = sin(angle) \* velocity * time
 
-> y = cos(angle) \* velocity \* ttime - ( ½ \* 9.8 * time<sup>2</sup>)
+> y = cos(angle) \* velocity \* time - ( ½ \* 9.8 * time<sup>2</sup>)
 
