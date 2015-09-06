@@ -8,4 +8,5 @@
 * [Quadratic Equation](quadratic_equation.md)
 * [Pythagorean Theorem](pythagorean_theorem.md)
 * [The Rules](the_rules.md)
+* Git and Github
 
