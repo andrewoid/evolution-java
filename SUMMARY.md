@@ -10,4 +10,5 @@
 * [The Rules](the_rules.md)
 * [Git and Github](git_and_github.md)
    * [Introduction](git_and_github/introduction.md)
+   * Installing Git
 
