@@ -11,5 +11,5 @@
 * [Git and Github](git_and_github.md)
    * [Introduction](git_and_github/introduction.md)
    * [Installing Git](git_and_github/installing_git.md)
-   * Quick Command Line Tutorial - Windows
+   * [Quick Command Line Tutorial - Windows](git_and_github/quick_command_line_tutorial_-_windows.md)
 
