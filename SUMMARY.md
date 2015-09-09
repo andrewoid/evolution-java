@@ -9,4 +9,5 @@
 * [Pythagorean Theorem](pythagorean_theorem.md)
 * [The Rules](the_rules.md)
 * [Git and Github](git_and_github.md)
+   * Introduction
 
