@@ -10,6 +10,8 @@ Between each letter should be a space. So the string "ABC" should encode to ".- 
 
 Between each word should be three spaces "   "
 
+    package [lastname].morsecode;
+
     public class MorseCode {
     
         public MorseCode() {
