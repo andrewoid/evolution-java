@@ -15,6 +15,6 @@
    * [Quick Command Line Tutorial - Mac](git_and_github/quick_command_line_tutorial_-_mac.md)
    * [Git Commands](git_and_github/git_commands.md)
    * [ScrabbleDictionary](scrabbledictionary.md)
-       * MorseCode
+   * MorseCode
    * [Uploading to Github](git_and_github/uploading_to_github.md)
 
