@@ -2,6 +2,7 @@
 
 * [Introduction](README.md)
 * [Art And Fear](art_and_fear.md)
+* Warmup
 * [Projectile](projectile.md)
    * Warmup
 * [Projectile Answer](projectile_answer.md)
