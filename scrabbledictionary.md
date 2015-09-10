@@ -2,7 +2,8 @@
 
 You work for a company making a "Scrabble" type game. You must create a class called ScrabbleDictionary. You can download a dictionary text file from the [WinEdt website](http://www.winedt.org/Dict/). Download the English language zip file. Inside you will find a file called "US.dic".
 
-
+    package [lastname].scrabble;
+    
     public class ScrabbleDictionary {
     
         public ScrabbleDictionary() {
