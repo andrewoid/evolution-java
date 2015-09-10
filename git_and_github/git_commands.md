@@ -39,10 +39,3 @@ A quick reference PDF for github can be found [here](https://training.github.com
 > git commit -m "commit message goes here"
 
 The commit message should be something short that describes the work that had been done. If we do more work and run "git status" we would see a list of new files and a list of modified files. When we are finished, all the files should be added to git and another commit should be made.
-
-
-# Uploading your code to Github
-
-> git remote add origin GITHUB_REPO_URL
-
-> git push -u origin master
