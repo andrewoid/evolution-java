@@ -20,18 +20,28 @@ A quick reference PDF for github can be found [here](https://training.github.com
 
 > git status
 
-5. By default, git will allow you to add all files
+5. By default, git will allow you to add all files. However there are certain files that we don't want added to git. In order to tell git not to add these files we need to create a ".gitignore" file. A ".gitignore" file is just a text file with a list of file types to ignore. Create a text file called ".gitignore" (the . in the beginning is important) and inside put the following line.
 
+    *.class
+    
+6. If you run "git status" again you should see less files. All java .class files will no longer appear on the list. The reason we ignore .class files is because they are automatically generated from source code so there isn't a reason to add them to git.
+
+7. Now we want to add some files to git. We can add them one by one or we add multiples at a time. 
+
+> git add src
+
+> git add 
 
 > git add
 
-> git commit
+8. After adding files to git we should check "git status" to make sure we've added all the files. When we are finished adding files to git we need to commit those files. Committing files is when we tell git that we are finished with all the files we've added.  
 
 > git commit -m "commit message goes here"
 
-> git reset
+The commit message should be something short that describes the work that had been done. If we do more work and run "git status" we would see a list of new files and a list of modified files. When we are finished, all the files should be added to git and another commit should be made.
 
-> git reset --HARD
+
+# Uploading your code to Github
 
 > git remote add origin GITHUB_REPO_URL
 
