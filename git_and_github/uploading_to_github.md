@@ -19,3 +19,6 @@ To upload your code to Github type
 > git push origin master
 
 If you refresh the page on Github you should now see all your code.
+
+
+The [source code](https://github.com/andrewoid/evolution-java) for this book is also on Github.
