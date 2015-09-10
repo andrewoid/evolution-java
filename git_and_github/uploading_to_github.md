@@ -16,5 +16,6 @@ To hook up our local repository to the Github repository type
 
 To upload your code to Github type
 
-> git push
+> git push origin master
 
+If you refresh the page on Github you should now see all your code.
