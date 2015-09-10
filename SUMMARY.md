@@ -13,5 +13,5 @@
    * [Installing Git](git_and_github/installing_git.md)
    * [Quick Command Line Tutorial - Windows](git_and_github/quick_command_line_tutorial_-_windows.md)
    * [Git Commands](git_and_github/git_commands.md)
-   * Uploading to Github
+   * [Uploading to Github](git_and_github/uploading_to_github.md)
 
