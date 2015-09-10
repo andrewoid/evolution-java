@@ -1,6 +1,6 @@
 ##ScrabbleDictionary
 
-You work for a company making a "Scrabble type" game. You must create a class called ScrabbleDictionary.
+You work for a company making a "Scrabble type" game. You must create a class called ScrabbleDictionary. You can download a dictionary text file from the [WinEdt website](http://www.winedt.org/Dict/). Download the English language zip file. Inside you will find a file called "US.dic".
 
     public class ScrabbleDictionary {
     
@@ -23,3 +23,7 @@ You work for a company making a "Scrabble type" game. You must create a class ca
         }
     
     }
+    
+Also create a ScrabbleDictionaryTest class that has methods to test the contains() and getWordsWith() methods. 
+
+Make sure when you finish that you push the ScrabbleDictionary.java, ScrabbleDictionaryTest.java and US.dic files to github.
