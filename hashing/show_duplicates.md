@@ -1,6 +1,6 @@
 ###Show Duplicates
 
-Can you now write a program using HashSet that only outputs duplicates in an Array of Strings?
+Can you now write a program using HashSet that only outputs duplicates in an array of Strings?
 
     package [lastname].math;
     public class ShowDuplicates {
