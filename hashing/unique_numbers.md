@@ -1,4 +1,6 @@
-###Unique Numbers
+###Unique Strings
+
+Given an array of Strings, output the Strings removing duplicates. 
 
     package [lastname].math;
     public class UniqueNumbers {
@@ -7,7 +9,11 @@
     
             String array[] = new String[] {
                 "A", "B", "B", "C"
-            }
+            };
+            
+            ...
         
         }
     }
+    
+This is a classic interview question. Try to write the answer on your own (without looking it up).
