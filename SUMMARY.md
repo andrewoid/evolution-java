@@ -2,13 +2,12 @@
 
 * [Introduction](README.md)
 * [Art And Fear](art_and_fear.md)
-* [Projectile Answer](projectile_answer.md)
-* [Projectile](projectile.md)
-* [JUnit Tests](unit_tests.md)
-* [Quadratic Equation](quadratic_equation.md)
-* [Pythagorean Theorem](pythagorean_theorem.md)
-* [The Rules](the_rules.md)
 * Unit Tests
+   * [Projectile Answer](projectile_answer.md)
+   * [Projectile](projectile.md)
+   * [JUnit Tests](unit_tests.md)
+   * [Quadratic Equation](quadratic_equation.md)
+   * [Pythagorean Theorem](pythagorean_theorem.md)
 * [Git and Github](git_and_github.md)
    * [Introduction](git_and_github/introduction.md)
    * [Installing Git](git_and_github/installing_git.md)
@@ -19,4 +18,5 @@
    * [Downloading From Github](git_and_github/downloading_from_github.md)
    * [ScrabbleDictionary](scrabbledictionary.md)
    * [MorseCode](git_and_github/morsecode.md)
+* [The Rules](the_rules.md)
 
