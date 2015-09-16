@@ -20,5 +20,6 @@
    * [MorseCode](git_and_github/morsecode.md)
 * [Hashing](hashing.md)
    * [Unique Strings](hashing/unique_strings.md)
+   * Unique Strings - Novice Answer
 * [The Rules](the_rules.md)
 
