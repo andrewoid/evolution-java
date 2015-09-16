@@ -25,6 +25,5 @@
    * [Show Duplicates](hashing/show_duplicates.md)
    * [Count Duplicates](hashing/count_duplicates.md)
    * [ScrabbleDictionary and MorseCode revisited](hashing/scrabble_and_morsecode_revisited.md)
-   * MostPalindromes
 * [The Rules](the_rules.md)
 
