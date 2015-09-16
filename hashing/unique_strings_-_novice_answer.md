@@ -1,7 +1,7 @@
 ###Unique Strings - Novice Answer
 
     package [lastname].math;
-    public class UniqueNumbers {
+    public class UniqueStrings {
     
         public static void main( String args[] ) {
     
