@@ -15,3 +15,4 @@ Write a program that uses the same US.dic file used with ScrabbleDictionary and 
     
     }
 
+*Hint: start by finding some code to determine if two word are anagrams*
