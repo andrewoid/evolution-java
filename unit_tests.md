@@ -1,4 +1,4 @@
-### Unit Tests
+### JUnit Tests
 In the Projectile problem the simplest solution is to write a main(). However, in the real world, requirements are rarely that simple and programs are rarely that small. 
 
 The problem you were given was a math problem. How does the problem change if it's presented like this:
