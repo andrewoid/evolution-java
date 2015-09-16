@@ -6,7 +6,12 @@ Anagrams are sets of words where the all of the letters of a word can be rearran
     
 Write a program that uses the same US.dic file used with ScrabbleDictionary and output which words in the dictionary belong to the largest anagram group.
 
-    package [lastname].text;
+    package [lastname].anagrams;
     public class MostAnagrams {
+    
+        public static void main( String args[] ) {
+            ...
+        }
+    
     }
 
