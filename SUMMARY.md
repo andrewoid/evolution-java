@@ -19,4 +19,5 @@
    * [ScrabbleDictionary](scrabbledictionary.md)
    * [MorseCode](git_and_github/morsecode.md)
 * [The Rules](the_rules.md)
+* Hashing
 
