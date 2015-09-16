@@ -1,6 +1,6 @@
 ###Show Duplicates
 
-Given an array of Strings, output all Strings that have duplicates.
+Can you now write a program using HashSet that only outputs duplicates in an Array of Strings?
 
     package [lastname].math;
     public class DuplicateStrings {
