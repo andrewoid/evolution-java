@@ -19,5 +19,6 @@
    * [ScrabbleDictionary](scrabbledictionary.md)
    * [MorseCode](git_and_github/morsecode.md)
 * [Hashing](hashing.md)
+   * Unique Numbers
 * [The Rules](the_rules.md)
 
