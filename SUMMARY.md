@@ -22,5 +22,6 @@
    * [Unique Strings](hashing/unique_strings.md)
    * [Unique Strings - Novice Answer](hashing/unique_strings_-_novice_answer.md)
    * [Unique Strings - Expert Answer](hashing/unique_strings_-_expert_answer.md)
+   * Count Duplicates
 * [The Rules](the_rules.md)
 
