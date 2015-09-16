@@ -21,5 +21,6 @@
 * [Hashing](hashing.md)
    * [Unique Strings](hashing/unique_strings.md)
    * [Unique Strings - Novice Answer](hashing/unique_strings_-_novice_answer.md)
+   * Unique Strings - Expert Answer
 * [The Rules](the_rules.md)
 
