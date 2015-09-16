@@ -24,5 +24,6 @@
    * [Unique Strings - Expert Answer](hashing/unique_strings_-_expert_answer.md)
    * [Show Duplicates](hashing/show_duplicates.md)
    * [Count Duplicates](hashing/count_duplicates.md)
+   * Scrabble and MorseCode revisited
 * [The Rules](the_rules.md)
 
