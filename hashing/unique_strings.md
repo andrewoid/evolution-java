@@ -3,7 +3,7 @@
 Given an array of Strings, output the Strings removing duplicates. 
 
     package [lastname].math;
-    public class UniqueNumbers {
+    public class UniqueStrings {
     
         public static void main( String args[] ) {
     
