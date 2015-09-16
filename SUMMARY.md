@@ -17,4 +17,5 @@
    * [Uploading to Github](git_and_github/uploading_to_github.md)
    * [ScrabbleDictionary](scrabbledictionary.md)
    * [MorseCode](git_and_github/morsecode.md)
+   * Downloading From Github
 
