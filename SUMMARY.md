@@ -18,6 +18,6 @@
    * [Downloading From Github](git_and_github/downloading_from_github.md)
    * [ScrabbleDictionary](scrabbledictionary.md)
    * [MorseCode](git_and_github/morsecode.md)
-* Hashing
+* [Hashing](hashing.md)
 * [The Rules](the_rules.md)
 
