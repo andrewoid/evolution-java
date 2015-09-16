@@ -42,7 +42,7 @@ In this instance we need more than Set. We need a way to **Map** a String to it'
             
             // iterate through the HashMap's key-value pairs
             for ( Map.Entry<Stirng, Integer> entry : map.entrySet ) {
-                System.out.println(entry.key + " " + entry.value);
+                System.out.println(entry.getKey() + " " + entry.getValue());
             }
         
         }
