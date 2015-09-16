@@ -3,7 +3,7 @@
 Can you now write a program using HashSet that only outputs duplicates in an Array of Strings?
 
     package [lastname].math;
-    public class DuplicateStrings {
+    public class ShowDuplicates {
     
         public static void main( String args[] ) {
     
