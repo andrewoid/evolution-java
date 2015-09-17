@@ -21,3 +21,9 @@
 	    return checkCondition();
 9. Pay attention to warnings (code that is underlined in yellow). Sometimes warnings are a sign that there is a bug. Fix them if you see them.
 10. Do not check in code that breaks unit tests. 
+11. Don't do an Assert like this:
+        Assert.assertEquals(true, methodCall());
+
+    Use assertTrue() and assertFalse() when you can
+        Assert.assertTrue(methodCall());
+    
