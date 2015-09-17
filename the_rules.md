@@ -7,3 +7,4 @@
 4. Do not repeat yourself.
 5. Do not repeat yourself.
 6. Do not read from a file multiple times. Read from the file once and save the data.
+7. Do not use += when doing String concatenation. Use StringBuilder instead.
