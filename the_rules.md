@@ -7,7 +7,7 @@
 4. Do not repeat yourself.
 5. Do not repeat yourself.
 6. Do not read from a file multiple times. Read from the file once and save the data.
-7. Do not use += when doing String concatenation. Use [StringBuilder](http://docs.oracle.com/javase/8/docs/api/java/lang/StringBuilder.html) instead.
+7. Do not use += when doing String concatenation. Use [StringBuilder](http://docs.oracle.com/javase/8/docs/api/java/lang/StringBuilder.html).
 8. Do not write code like this:
 
         if (checkCondition()) {
