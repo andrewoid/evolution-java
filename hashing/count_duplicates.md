@@ -30,18 +30,18 @@ In this instance we need more than Set. We need a way to **Map** a String to it'
             HashMap<String, Integer> map = new HashMap<String, Integer>();
             
             // fill the HashMap
-            for ( String s : array ) {
-                Integer count = map.get(s);
-                if ( count == null ) {
-                    map.put(s, 1);
+            for ( String key : array ) {
+                int value = map.get(s);
+                if ( value == null ) {
+                    map.put(key, 1);
                 }
                 else {
-                    map.put(s, count+1);
+                    map.put(key, value+1);
                 }
             }
             
             // iterate through the HashMap's key-value pairs
-            for ( Map.Entry<Stirng, Integer> entry : map.entrySet ) {
+            for ( Map.Entry<String, Integer> entry : map.entrySet ) {
                 System.out.println(entry.getKey() + " " + entry.getValue());
             }
         
