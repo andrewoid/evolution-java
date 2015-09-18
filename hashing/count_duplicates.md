@@ -31,7 +31,7 @@ In this instance we need more than Set. We need a way to **Map** a String to it'
             
             // fill the HashMap
             for ( String key : array ) {
-                int value = map.get(s);
+                int value = map.get(key);
                 if ( value == null ) {
                     map.put(key, 1);
                 }
