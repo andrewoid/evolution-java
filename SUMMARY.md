@@ -26,6 +26,6 @@
    * [Count Duplicates](hashing/count_duplicates.md)
    * [ScrabbleDictionary and MorseCode revisited](hashing/scrabble_and_morsecode_revisited.md)
    * [MostAnagrams](hashing/mostanagrams.md)
-* [The Rules](the_rules.md)
 * JSON
+* [The Rules](the_rules.md)
 
