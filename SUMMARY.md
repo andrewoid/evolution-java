@@ -28,4 +28,5 @@
    * [MostAnagrams](hashing/mostanagrams.md)
 * JSON
 * [The Rules](the_rules.md)
+* Swing
 
