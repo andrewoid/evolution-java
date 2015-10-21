@@ -30,6 +30,6 @@
    * [Json Format](json/json_format.md)
    * [GSON](json/gson.md)
 * Swing
-   * JFrame
+   * [JFrame](swing/jframe.md)
 * [The Rules](the_rules.md)
 
