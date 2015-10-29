@@ -27,4 +27,4 @@
     Use assertTrue() and assertFalse() when you can
         Assert.assertTrue(methodCall());
     
-12. Do not use instanceof
+12. Do not use instanceof unless you have no other choice,
