@@ -11,14 +11,14 @@
 8. Do not write code like this:
 
         if (checkCondition()) {
-	    	return true;
-	    } else {
-	    	return false;
-	    }
+            return true;
+        } else {
+            return false;
+        }
 	
-	Instead write it like this:
+    Instead write it like this:
 	
-	    return checkCondition();
+        return checkCondition();
 9. Pay attention to warnings (code that is underlined in yellow). Sometimes warnings are a sign that there is a bug. Fix them if you see them.
 10. Do not check in code that breaks unit tests. 
 11. Don't do an Assert like this:
@@ -27,4 +27,5 @@
     Use assertTrue() and assertFalse() when you can
         Assert.assertTrue(methodCall());
     
-12. Do not use instanceof unless you have no other choice.
+12. Do not use `instanceof`.
+13. Reformat your code with CTRL + ALT + L. Do not leave your code messy.
