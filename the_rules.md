@@ -1,7 +1,7 @@
 
 # The Rules
 
-1. Do not create static variables or static methods.
+1. Do not create static variables or static methods. The static keyword should only be used for main()
 2. Always create a package for your classes. Do not use the "default package".
 3. Always use {}s. Even if what you are wrapping is only one line.
 4. Do not repeat yourself.
@@ -19,12 +19,15 @@
 	Instead write it like this:
 	
 	    return checkCondition();
+	    
 9. Pay attention to warnings (code that is underlined in yellow). Sometimes warnings are a sign that there is a bug. Fix them if you see them.
 10. Do not check in code that breaks unit tests. 
 11. Don't do an Assert like this:
+
         Assert.assertEquals(true, methodCall());
 
     Use assertTrue() and assertFalse() when you can
+    
         Assert.assertTrue(methodCall());
     
 12. Do not use instanceof unless you have no other choice.
