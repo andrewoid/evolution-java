@@ -3,3 +3,4 @@
 * [Quick Command Line Tutorial - Windows](git_and_github/quick_command_line_tutorial_-_windows.md)
 * [Quick Command Line Tutorial - Mac](git_and_github/quick_command_line_tutorial_-_mac.md)
 * [Git Commands](git_and_github/git_commands.md)
+* [GitHub Actions](github_actions.md)
