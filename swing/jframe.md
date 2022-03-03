@@ -1,5 +1,9 @@
 # JFrame
 
-Swing is the name of one of the frameworks to create GUIs in Java. 
+# Swing Components
 
-A "window" in Swing is the JFrame class. 
+https://web.mit.edu/6.005/www/sp14/psets/ps4/java-6-tutorial/components.html
+
+# Layout Managers
+
+https://docs.oracle.com/javase/tutorial/uiswing/layout/visual.html
