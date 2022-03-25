@@ -1,7 +1,7 @@
-### Creating a new project and a new repo on GitHub
+### Creating a New Project and a New Repo on GitHub
 
-3. Create your project in IntelliJ
-4. Add a .gitignore
+3. Create a new Project
+4. Add a `.gitignore` from a previous project.
 5. Go into your project folder on the command line
 6. Run the following commands
 
