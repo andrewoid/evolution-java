@@ -1,13 +1,31 @@
 
 name: Java/Gradle CI
 
-# https://docs.github.com/en/actions/guides/building-and-testing-java-with-gradle
+# This file should be located in .github/workflows
+# must copy "modified_google_checks.xml" as well
 
-on: [push, pull_request]
+# https://docs.github.com/en/actions/guides/building-and-testing-java-with-gradle
+# https://github.com/dbelyaev/action-checkstyle
+
+on: [pull_request]
 
 jobs:
-  build:
 
+  checkstyle:
+    name: runner / checkstyle
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: dbelyaev/action-checkstyle@v0.6.1
+        with:
+          github_token: ${{ secrets.github_token }}
+          reporter: github-pr-review
+          level: warning
+          fail_on_error: true
+          checkstyle_config: .github/workflows/modified_google_checks.xml
+
+
+  build:
     runs-on: ubuntu-latest
 
     steps:
