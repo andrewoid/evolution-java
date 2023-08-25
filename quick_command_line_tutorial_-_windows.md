@@ -10,10 +10,6 @@ cd stands for "Change Directory".
 
 moves up one directory
 
-> X:
-
-Change drive to the X drive. Replace X with whatever drive you want to access.
-
 > dir
 
 List the files in the current directory.

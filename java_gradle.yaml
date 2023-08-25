@@ -2,7 +2,7 @@
 name: Java/Gradle CI
 
 # This file should be located in .github/workflows
-# must copy "modified_google_checks.xml" as well
+# must copy "checkstyle.xml" as well
 
 # https://docs.github.com/en/actions/guides/building-and-testing-java-with-gradle
 # https://github.com/dbelyaev/action-checkstyle
@@ -27,7 +27,7 @@ jobs:
           reporter: github-pr-review
           level: warning
           fail_on_error: true
-          checkstyle_config: .github/workflows/modified_google_checks.xml
+          checkstyle_config: .github/workflows/checkstyle.xml
 
 
   build:
