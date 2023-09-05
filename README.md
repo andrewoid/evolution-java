@@ -1,9 +1,9 @@
 * [The Rules](the_rules.md)
 * [How did you get into programming?](https://www.youtube.com/watch?v=t32BNi3NEYA)
 * [Art And Fear](art_and_fear.md)
-* [Quick Command Line Tutorial - Windows](git_and_github/quick_command_line_tutorial_-_windows.md)
-* [Quick Command Line Tutorial - Mac](git_and_github/quick_command_line_tutorial_-_mac.md)
-* [Git Commands](git_and_github/git_commands.md)
+* [Quick Command Line Tutorial - Windows](git/quick_command_line_tutorial_-_windows.md)
+* [Quick Command Line Tutorial - Mac](git/quick_command_line_tutorial_-_mac.md)
+* [Git Commands](git/git_commands.md)
 * [GitHub Actions](github_actions.md)
 * [Configure IntelliJ](intellij/configure_intellij.md)
 
