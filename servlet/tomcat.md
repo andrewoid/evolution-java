@@ -12,8 +12,17 @@ Unzip the contents into any directory.
 
 The two important directories for us are `bin` and `webapps`.
 
-In order to run Tomcat, go into the `bin` directory and run `startup.bat` (Windows) `startup.sh` (Mac/Linux). If you want to shutdown Tomcat run `shutdown.bat` or `shutdown.sh`
+Mac/Linux: To make tomcat runnable, navigate to the `bin` directory and run 
 
+``` bash
+chmod +x startup.sh
+chmod +x shutdown.sh
+chmod +x catalina.sh
+```
+
+In order to run Tomcat, go into the `bin` directory and run `startup.bat` (Windows) `./startup.sh` (Mac/Linux). If you want to shut down Tomcat run `shutdown.bat` or `./shutdown.sh`
+
+You can verify that Tomcat is started by going to http://localhost:8080
 
 ### Project Configuration
 
@@ -66,12 +75,18 @@ In terminal run
 
 ` ./gradlew war `
 
-If it is successful you should see a file named `` in the `build` directory of your IntelliJ project.
+If it is successful you should see a war file in the `build/libs` directory of your IntelliJ project.
 
 To deploy it to Tomcat, run this command. 
 
 Windows
-` `
+`cp build/libs/*.war /path/to/tomcat/webapps`
 
 Mac/Linux
-` `
+`copy build/libs/*.war /path/to/tomcat/webapps`
+
+Your webapp should be available at http://localhost:8080/Project/servletName
+
+To watch the logs run this command on Mac/Linux
+
+`tail -f logs/catalina.out`
