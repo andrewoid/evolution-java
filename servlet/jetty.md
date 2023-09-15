@@ -1,8 +1,8 @@
 Add [Jetty](https://eclipse.dev/jetty/) as a dependency in `build.gradle`
 
-    compileOnly 'javax.servlet:servlet-api:2.5'
-    implementation 'org.eclipse.jetty:jetty-server:9.4.51.v20230217'
-    implementation 'org.eclipse.jetty:jetty-servlet:9.4.51.v20230217'
+    compileOnly 'jakarta.servlet:jakarta.servlet-api:6.0.0'
+    implementation 'org.eclipse.jetty:jetty-server:11.0.14'
+    implementation 'org.eclipse.jetty:jetty-servlet:11.0.14'
 
 The code below allows you to run the server locally and then connect to it with a web browser
 

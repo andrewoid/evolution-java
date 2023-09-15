@@ -6,7 +6,7 @@ Gradle can be set up to create [war files](https://docs.gradle.org/current/userg
 
 #### Download Tomcat
 
-[Download](https://tomcat.apache.org/download-90.cgi) the zip version of Tomcat 9.
+[Download](https://tomcat.apache.org/download-10.cgi) the zip version of Tomcat 10.
 
 Unzip the contents into any directory.
 
@@ -15,9 +15,7 @@ The two important directories for us are `bin` and `webapps`.
 Mac/Linux: To make tomcat runnable, navigate to the `bin` directory and run 
 
 ``` bash
-chmod +x startup.sh
-chmod +x shutdown.sh
-chmod +x catalina.sh
+chmod +x startup.sh shutdown.sh catalina.sh
 ```
 
 In order to run Tomcat, go into the `bin` directory and run `startup.bat` (Windows) `./startup.sh` (Mac/Linux). If you want to shut down Tomcat run `shutdown.bat` or `./shutdown.sh`
@@ -80,13 +78,11 @@ If it is successful you should see a war file in the `build/libs` directory of y
 To deploy it to Tomcat, run this command. 
 
 Windows
-`cp build/libs/*.war /path/to/tomcat/webapps`
+`copy build/libs/*.war /path/to/tomcat/webapps`
 
 Mac/Linux
-`copy build/libs/*.war /path/to/tomcat/webapps`
+`cp build/libs/*.war /path/to/tomcat/webapps`
 
 Your webapp should be available at http://localhost:8080/Project/servletName
 
-To watch the logs run this command on Mac/Linux
-
-`tail -f logs/catalina.out`
+If something doesn't work you can look at a log file located in the `logs` directory

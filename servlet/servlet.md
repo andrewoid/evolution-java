@@ -5,7 +5,7 @@ https://www.geeksforgeeks.org/introduction-java-servlets/
 - Add to `dependencies` in `build.gradle`
 ```
     implementation 'com.google.code.gson:gson:2.10.1'
-    compileOnly 'javax.servlet:servlet-api:2.5'
+    compileOnly 'jakarta.servlet:jakarta.servlet-api:6.0.0'
 ```
 
 ``` java 
