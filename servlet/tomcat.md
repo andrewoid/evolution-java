@@ -10,7 +10,7 @@ Gradle can be set up to create [war files](https://docs.gradle.org/current/userg
 
 Unzip the contents into any directory.
 
-The two important directories for us are `bin` and `webapps`.
+The three important directories for us are `bin`, `webapps`, `logs`.
 
 Mac/Linux: To make tomcat runnable, navigate to the `bin` directory and run 
 

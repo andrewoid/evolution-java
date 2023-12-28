@@ -7,6 +7,11 @@
 * [GitHub Actions](github_actions.md)
 * [Configure IntelliJ](intellij/configure_intellij.md)
 
+* [Servlet](servlet/servlet.md)
+* [Jetty](servlet/jetty.md)
+* [Tomcat](servlet/tomcat.md)
+* [Amazon Elastic Beanstalk](servlet/amazon/elasticbeanstalk.md)
+
 ### Create a new Java Project (with Gradle) in IntelliJ
 Add `.gitignore`
 ```
