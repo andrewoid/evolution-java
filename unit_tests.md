@@ -1,69 +1,97 @@
-### JUnit Tests
-In the Projectile problem the simplest solution is to write a main(). However, in the real world, requirements are rarely that simple and programs are rarely that small. 
+### [JUnit5](https://junit.org/junit5/)
 
-The problem you were given was a math problem. How does the problem change if it's presented like this:
+#### Assertions
 
->You are working at a company making a baseball home run simulation program. For instance, a batter hits a ball at a 31 degree angle with a velocity of 20 meters/second. What is the location of the ball after 2.7 seconds?
+All assertions come from the `org.junit.jupiter.api.Assertions` class in
 
-What's changed in the above problem description is that you've now been asked to write a piece of a program, not the whole program itself. **This situation is way more common.** In this case your answer isn't a main(), it's a class.
+`assertEquals(expected, actual)`
 
-Develop a class with the following methods
+`assertNotEquals(expected, actual)`
 
-    public class Projectile {
+`assertTrue(condition)`
 
-	    public Projectile(double angle, double velocity) { ... }
-	
-	    public void setTime(double time) { ... }
-	
-	    public double getX() { ... }
-	
-	    public double getY() { ... }
-	
+`assertFalse(condition)`
+
+`assertNull(object)`
+
+`assertNotNull(object)`
+
+`assertArrayEquals(expectedArray, actualArray)`
+
+#### Writing tests
+
+Each of our tests have 3 parts.
+
+- `given` - where we create our objects, mocks and `doReturn` calls.
+- `when` - the method call that we are testing.
+- `then` - where we put our `assert` and `verify` calls.
+
+``` java
+// Class should be named for the class you are testing.
+public class CalculatorTest {
+
+    @Test
+    // the name of the test should match the name of the method being tested.
+    public void add() {
+        // given
+        Calculator calculator = new Calculator();
+        
+        // when
+        int actual = calculator.add(5, 2);
+        
+        // then
+        assertEquals(7, actual);
     }
-    
----
 
-The code above is simple enough to write. The question is, **does it work?**
+}
+```
 
-In the real world, code must be tested. You may have changed the main() you wrote to use the Projectile class instead and been satisfied with the results but in the real world you cannot create main() methods to test every class you write.
+### [Mockito](https://site.mockito.org/)
 
-If you are asked to edit the Projectile class later on and accidentally change part of an equation, you'd never know it until the bug shows up as a result of running the larger program.
+Suppose you have a method that returns `void`. How can you write a test that verifies what the method is supposed to do?
 
-The answer to this issue is to use Unit Tests. A unit test is a small piece of code that tests a part of a program. The framework we will use to write unit tests is called [JUnit](http://www.junit.org).
+A mock is an object that you can use to "mimic" a real object in a test and then verify its interaction.
 
-Create the following class Called ProjectileTest
+``` java 
+public class OrderProcessor {
 
-    class ProjectileTest {
-
-	    @Test
-	    public void testGetX() {
-		    Projectile projectile = new Projectile(31, 20);
-		    Assert.assertEquals(27.81, projectile.getX(), 0.1);
-	    }
-	
-
-	    @Test
-	    public void testGetY() {
-		    Projectile projectile = new Projectile(31, 20);
-		    Assert.assertEquals(10.56, projectile.getY(), 0.1);
-	    }
-	
+    public void processAll(List<Order> orders, PaymentMethod paymentMethod) {   
+        for (Order order : orders) {
+            paymentMethod.charge(order.getAmount())
+        }
+    }
 }
 
-A few things to notice.
-1. The tests are in a seperate class. The class name is the same as the class you are testing with the words "Test" at the end.
-2. Each method in this class begins with the word tests and has the @Test annotation.
-3. You can run the test by right clicking on the file and selecting "Run".
+// Class should be named for the class you are testing.
+public class OrderProcessorTest {
 
-Each method in ProjecileTest that is annotated with @Test is one unit test. Each method is also named for the functionality that it is testing. 
+    @Test
+    // the name of the test should match the name of the method being tested.
+    public void charge() {
+        // given
+        OrderProcessor processor = new OrderProcessor();
+        PaymentMethod paymentMethod = mock();
+        Order order = mock();
+        List<Order> orders = List.of(order);
+        doReturn(1234).whenever(order).getAmount();
+        
+        // when
+        processor.processAll(orders, paymentMethod);
+        
+        // then
+        verify(paymentMethod).charge(1234);
+    }
 
-The [Assert](http://junit.org/apidocs/org/junit/Assert.html) class is used to test the results of code. The assert methods check a certain condition. In this case the condition is that the first a second parameter to .assertEquals() are equal to each other. Consult the javadocs for a list of available assert methods. If the assert fails, then an Exception is thrown and the test is marked as a failure.
+}
+```
 
-(When comparing doubles in Java it is important to allow for small errors in calculation. The [assertEquals](http://junit.org/apidocs/org/junit/Assert.html#assertEquals(double, double, double%29) for doubles adds a "delta" parameter at the end to specify the range between the two numbers by which they could still be considered equal.)
+#### doReturn()
 
-Here is a good tutorial on JUnit.
-http://www.vogella.com/tutorials/JUnit/article.html
+Methods of a mock will have no effect and if a method of a mock returns a value it will either return `null`, `false`
+or `0` depending on the return type.
 
+`doReturn` allows us to set up our mock objects so that they return the data we want.
 
-    
+#### verify()
 
+In order test what our method is doing, we can `verify` that methods of our mock were called with specific data.
