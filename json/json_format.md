@@ -1,8 +1,9 @@
-# JSON
+# Json
 
-JSON stands for JavaScript Object Notation
+Json stands for JavaScript Object Notation
 
-It is a format for representing "object data" as text. It is becoming more common to see this format where XML had been used years ago.
+It is a format for representing "object data" as text. It is becoming more common to see this format where XML had been
+used years ago.
 
 Like Java, an object block begins with a { and ends with a }
 
@@ -12,6 +13,7 @@ Like Java, an array begins with a [ and ends with a ]
 
 A sample Json file for a bookstore could look like this.
 
+``` json
     {
         "name" : "Bookstore on J",
         "address" "1234 Ave J",
@@ -33,4 +35,5 @@ A sample Json file for a bookstore could look like this.
             }
         ]
     }
+```
 

@@ -1,5 +1,16 @@
 ### [JUnit5](https://junit.org/junit5/)
 
+#### dependency
+
+Add this to the dependencies block in `build.gradle`
+
+``` groovy 
+dependencies {
+    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.9.2'
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.9.2'
+}
+```
+
 #### Assertions
 
 All assertions come from the `org.junit.jupiter.api.Assertions` class in
@@ -47,6 +58,18 @@ public class CalculatorTest {
 ```
 
 ### [Mockito](https://site.mockito.org/)
+
+#### dependency
+
+Add this to the dependencies block in `build.gradle`
+
+``` groovy 
+dependencies {
+    testImplementation 'org.mockito:mockito-core:5.5.0'
+}
+```
+
+#### Mocks
 
 Suppose you have a method that returns `void`. How can you write a test that verifies what the method is supposed to do?
 

@@ -1,8 +1,13 @@
-[RxJava](https://reactivex.io/) for asynchronous programming
-[Retrofit](https://square.github.io/retrofit/) for making requests for [JSON](https://www.w3schools.com/whatis/whatis_json.asp) data
-[Gson](https://github.com/google/gson) for turning JSON into Java objects
+[Json](json/json_format.md) is a data format
 
-Together these make requests for JSON over the internet very easy.
+[RxJava](https://reactivex.io/) is for asynchronous (multi-threaded) programming
+
+[Retrofit](https://square.github.io/retrofit/) is for making requests
+for [Json](https://www.w3schools.com/whatis/whatis_json.asp) data
+
+[Gson](https://github.com/google/gson) for turning [Json into Java objects]((json/gson.md)).
+
+Together these make requests for Json over the internet very easy.
 
 Add to your dependencies in `build.gradle`
 
@@ -13,7 +18,7 @@ Add to your dependencies in `build.gradle`
     implementation 'com.github.akarnokd:rxjava3-swing:3.1.1'
 ```
 
-[DummyJson](https://dummyjson.com/) will return json data for us to build applications around. 
+[DummyJson](https://dummyjson.com/) will return json data for us to build applications around.
 
 https://dummyjson.com/products/1
 
@@ -70,7 +75,7 @@ public interface ProductService {
     // configure Retrofit for the dummyjson website
     Retrofit retrofit = new Retrofit.Builder()
                 .baseUrl("https://dummyjson.com/")
-                // Configure Retrofit to use GSON to turn the JSON into Objects
+                // Configure Retrofit to use Gson to turn the Json into Objects
                 .addConverterFactory(GsonConverterFactory.create())
                 // Configure Retrofit to use Rx 
                 .addCallAdapterFactory(RxJava3CallAdapterFactory.create())
@@ -80,6 +85,7 @@ public interface ProductService {
 ```
 
 Use this code in tests **ONLY**
+
 ``` java 
     // given
     // create your service...
@@ -94,6 +100,7 @@ Use this code in tests **ONLY**
 ```
 
 Use this in application code.
+
 ``` java 
     // This will make a request for the ProductResponse on a separate Thread.
     Disposable disposable = service.getProductById(1)
@@ -108,6 +115,7 @@ Use this in application code.
 ```
 
 Controller Tests Should have this at the top of the class.
+
 ``` java
     // Put this ONCE at the top of your Controller Tests
     // This makes it so that our Service returns immediately.
