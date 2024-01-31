@@ -13,9 +13,15 @@ dependencies {
 
 #### Assertions
 
-All assertions come from the `org.junit.jupiter.api.Assertions` class in
+All assertions come from
+the [org.junit.jupiter.api.Assertions](https://junit.org/junit5/docs/5.10.1/api/org.junit.jupiter.api/org/junit/jupiter/api/Assertions.html)
+class in
 
 `assertEquals(expected, actual)`
+
+`assertEquals(expected, actual, delta)` -
+Use [this](https://junit.org/junit5/docs/5.10.1/api/org.junit.jupiter.api/org/junit/jupiter/api/Assertions.html#assertEquals(double,double,double))
+when comparing doubles or floats.
 
 `assertNotEquals(expected, actual)`
 

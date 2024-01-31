@@ -25,3 +25,6 @@
     # Save all your commits to GitHub
     git push origin branchName
 ```
+
+Once you are done with all your work, go to GitHub, to the page for this repository and open a Pull Request from
+this `branchName` to `main`.
