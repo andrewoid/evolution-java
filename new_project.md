@@ -4,6 +4,14 @@
 
 ![](new_project.png)
 
+Add a name then choose the following options.
+
+      Language : Java
+      
+      Build System : Gradle
+      
+      Gradle DSL : Groovy
+
 2. Add a [.gitignore](.gitignore) to the root of your project.
 
 3. Open a terminal inside the project (or use the terminal tab in Intellij)
