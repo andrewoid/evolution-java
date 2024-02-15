@@ -11,6 +11,9 @@
     * [Generate SSH Key](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent)
     * [Add SSH Key to Github](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/adding-a-new-ssh-key-to-your-github-account?tool=webui)
 * [Configure IntelliJ](intellij/configure_intellij.md)
+* Taking Screenshots
+    * [Windows](https://www.businessinsider.com/guides/tech/how-to-screenshot-on-windows)
+    * [Mac](https://support.apple.com/en-us/102646)
 
 #### How to work
 
@@ -22,7 +25,7 @@
 
 * [JUnit tests](unit_tests.md)
 * [Object Oriented Programming]
-* [Swing]
+* [Swing](swing/jframe.md)
 * [Json-Gson-Retrofit-Rx](rx_retrofit_gson.md)
 * [Servlet](servlet/servlet.md)
 * [Jetty](servlet/jetty.md)
