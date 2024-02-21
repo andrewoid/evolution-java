@@ -1,4 +1,3 @@
-
 # The Rules
 
 1. Do not create `static` variables or static methods. Only use static for `main()` or constants.
@@ -22,29 +21,35 @@ String ssn = person.getSocialSecurityNumber();
 ```
 
 5. Do not read from a file multiple times. Read from the file once and save the data.
-6. Do not use += when doing String concatenation. Use [StringBuilder](http://docs.oracle.com/javase/8/docs/api/java/lang/StringBuilder.html).
+6. Do not use += when doing String concatenation.
+   Use [StringBuilder](http://docs.oracle.com/javase/8/docs/api/java/lang/StringBuilder.html).
 7. Do not write code like this:
 
+``` java
         if (checkCondition()) {
             return true;
         } else {
             return false;
         }
-	
-    Write it like this:
-	
-	    return checkCondition();
+```
 
-8. Pay attention to warnings (code that is underlined in yellow). Sometimes warnings are a sign that there is a bug. Fix them if you see them.
-9. Do not check in code that breaks unit tests. 
+Write it like this:
+
+ ``` java
+       return checkCondition();
+```
+
+8. Pay attention to warnings (code that is underlined in yellow). Sometimes warnings are a sign that there is a bug. Fix
+   them if you see them.
+9. Do not check in code that breaks unit tests.
 10. Don't do an Assert like this:
 
         Assert.assertEquals(true, methodCall());
 
     Use `assertTrue()` and `assertFalse()` when you can
-    
+
         Assert.assertTrue(methodCall());
-    
+
 11. Do not use `instanceof`.
 12. Reformat your code with `CTRL + ALT + L`. Do not leave your code messy.
 13. Output Exception data correctly. Don't do
@@ -55,7 +60,7 @@ String ssn = person.getSocialSecurityNumber();
     }
 ```
 
-    Always do this instead:
+Always do this instead:
 
 ``` java
     catch (Exception e) {
