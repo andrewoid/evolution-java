@@ -12,9 +12,9 @@ Together these make requests for Json over the internet very easy.
 Add to your dependencies in `build.gradle`
 
 ```
-    implementation 'com.squareup.retrofit2:retrofit:2.9.0'
-    implementation 'com.squareup.retrofit2:converter-gson:2.9.0'
-    implementation 'com.squareup.retrofit2:adapter-rxjava3:2.9.0'
+    implementation 'com.squareup.retrofit2:retrofit:2.11.0'
+    implementation 'com.squareup.retrofit2:converter-gson:2.11.0'
+    implementation 'com.squareup.retrofit2:adapter-rxjava3:2.11.0'
     implementation 'com.github.akarnokd:rxjava3-swing:3.1.1'
 ```
 
@@ -110,7 +110,7 @@ Use this in application code.
                 .observeOn(SwingSchedulers.edt())
                 //.observeOn(AndroidSchedulers.mainThread()) // Instead use this on Android only
                 .subscribe(
-                        (response) -> handleResponse(response)),
+                        (response) -> handleResponse(response),
                         Throwable::printStackTrace);
 ```
 
