@@ -14,7 +14,10 @@ Add a name then choose the following options.
 
 2. Add a [.gitignore](.gitignore) to the root of your project.
 
-3. Open a terminal inside the project (or use the terminal tab in Intellij)
+3. Create a `.github/workflows/` directory. Copy [java_gradle.yaml](git/.github/workflows/java_gradle.yaml)
+   and [checkstyle.xml](git/.github/workflows/checkstyle.xml) to that directory.
+
+4. Open a terminal inside the project (or use the terminal tab in Intellij)
 
         # this makes the project into a git repo
         git init
@@ -34,11 +37,11 @@ Add a name then choose the following options.
         # commits all files that have been added
         git commit -m "initial commit"
 
-1. Create a new repository on GitHub
+5. Create a new repository on GitHub
 
 ![](new_repo.png)
 
-5. Add the repository as a remote with the SSH url (it should start with git@github)
+6. Add the repository as a remote with the SSH url (it should start with git@github)
 
 ![](ssh_url.png)
 
