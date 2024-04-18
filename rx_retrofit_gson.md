@@ -60,6 +60,8 @@ public class ProductResponse {
 }
 ```
 
+Using Path Variables
+
 ``` java
 
 public interface ProductService {
@@ -69,6 +71,15 @@ public interface ProductService {
 
 }
 
+```
+
+Using Query Parameters
+
+``` java
+public interface OpenWeatherMapService {
+    @GET("/data/2.5/weather")
+    Single<CurrentWeather> currentWeather(@Query("q") String city);
+}
 ```
 
 ``` java 
@@ -126,3 +137,4 @@ Controller Tests Should have this at the top of the class.
         // RxAndroidPlugins.setMainThreadSchedulerHandler(scheduler -> Schedulers.trampoline());
     }
 ```
+
