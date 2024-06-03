@@ -15,7 +15,6 @@ Add to your dependencies in `build.gradle`
     implementation 'com.squareup.retrofit2:retrofit:2.11.0'
     implementation 'com.squareup.retrofit2:converter-gson:2.11.0'
     implementation 'com.squareup.retrofit2:adapter-rxjava3:2.11.0'
-    implementation 'com.github.akarnokd:rxjava3-swing:3.1.1'
 ```
 
 [DummyJson](https://dummyjson.com/) will return json data for us to build applications around.
@@ -118,7 +117,7 @@ Use this in application code.
                 // tells Rx to request the data on a background Thread
                 .subscribeOn(Schedulers.io())
                 // tells Rx to handle the response on Swing's main Thread
-                .observeOn(SwingSchedulers.edt())
+                .observeOn(Schedulers.from(SwingUtilities::invokeLater))
                 //.observeOn(AndroidSchedulers.mainThread()) // Instead use this on Android only
                 .subscribe(
                         (response) -> handleResponse(response),
