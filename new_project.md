@@ -17,6 +17,12 @@ Add a name then choose the following options.
 3. Create a `.github/workflows/` directory. Copy [java_gradle.yaml](git/.github/workflows/java_gradle.yaml)
    and [checkstyle.xml](git/.github/workflows/checkstyle.xml) to that directory.
 
+``` bash
+mkdir .github/workflows/
+curl -o .github/workflows/java_gradle.yaml https://raw.githubusercontent.com/andrewoid/evolution-java/main/git/.github/workflows/java_gradle.yaml
+curl -o .github/workflows/checkstyle.xml https://raw.githubusercontent.com/andrewoid/evolution-java/main/git/.github/workflows/checkstyle.xml
+```
+
 4. Open a terminal inside the project (or use the terminal tab in Intellij)
 
         # this makes the project into a git repo
