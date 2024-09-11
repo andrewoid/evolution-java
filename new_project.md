@@ -18,7 +18,7 @@ Add a name then choose the following options.
    and [checkstyle.xml](git/.github/workflows/checkstyle.xml) to that directory.
 
 ``` bash
-mkdir .github/workflows/
+mkdir -p .github/workflows/
 curl -o .github/workflows/java_gradle.yaml https://raw.githubusercontent.com/andrewoid/evolution-java/main/git/.github/workflows/java_gradle.yaml
 curl -o .github/workflows/checkstyle.xml https://raw.githubusercontent.com/andrewoid/evolution-java/main/git/.github/workflows/checkstyle.xml
 ```
