@@ -7,7 +7,7 @@ Download the library
 ``` shell
 
 mkdir -p libs
-curl -o libs/basic_neural_network-v0.5.1-jar-with-dependencies.jar https://raw.githubusercontent.com/andrewoid/evolution-java/refs/heads/main/neural_network/basic_neural_network-v0.5.1-jar-with-dependencies.jar
+curl -o libs/basic_neural_network-v0.5.1-jar-with-dependencies.jar https://raw.githubusercontent.com/andrewoid/evolution-java/refs/heads/main/neural_network/basic_neural_network-v0.5.2-jar-with-dependencies.jar
 
 ```
 
@@ -15,7 +15,7 @@ Add it as a dependency in build.gradle
 
 ``` groovy
 
-implementation files('libs/basic_neural_network-v0.5.1-jar-with-dependencies.jar')
+implementation files('libs/basic_neural_network-v0.5.2-jar-with-dependencies.jar')
 
 ```
 
