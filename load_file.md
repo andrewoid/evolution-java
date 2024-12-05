@@ -1,7 +1,7 @@
 ### From "resources" directory
 
 ``` java
-InputStream in = ClassLoader.getSystemResourceAsStream("/file.in");
+InputStream in = getClass().getClassLoader().getResourceAsStream("file.in");
 ```
 
 With an `InputStream` you can then use it in a `BufferedReader` or `Scanner`. The file **must** begin with a slash to be
