@@ -37,3 +37,23 @@ Then add this to the `plugins` block.
 ```
 
 Then you can run the `shadowJar` gradle task and create a jar file that has all the code.
+
+## Amazon S3
+
+``` groovy
+    implementation 'software.amazon.awssdk:s3:2.20.36'
+```
+``` java
+    public BrickBreakerRequestHandler()
+    {
+        s3Client = S3Client.create();
+    }
+
+```
+
+``` java
+        GetObjectRequest getObjectRequest = GetObjectRequest
+                .builder()
+                .bucket("taub.bbnn").key("trained.json").build();
+        InputStream in = s3Client.getObject(getObjectRequest);
+```
