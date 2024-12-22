@@ -46,7 +46,7 @@ We can modify our `RequestHandler` to accept and return JSON by using an `Object
 public class HelloRequestHandler implements RequestHandler<Request, Response> {
 
     @Override
-    public String handleRequest(Request input, Context context) {
+    public Response handleRequest(Request input, Context context) {
         return new Response();
     }
 }
