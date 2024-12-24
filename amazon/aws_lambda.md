@@ -42,12 +42,32 @@ Then you can run the `shadowJar` gradle task and create a jar file that has the 
 We can modify our `RequestHandler` to accept and return JSON by using an `Object` in `RequestHandler` instead of a
 `String`.
 
+`Request` and `Response` are the classes that you create that get sent as and returned as JSON.
+
 ``` java 
-public class HelloRequestHandler implements RequestHandler<Request, Response> {
+public class HelloRequestHandler implements RequestHandler<APIGatewayProxyRequestEvent, Response> {
 
     @Override
-    public Response handleRequest(Request input, Context context) {
+    public Response handleRequest(APIGatewayProxyRequestEvent event, Context context) {
+        String body = event.getBody();
+        Gson gson = new Gson();
+        Request request = gson.fromJson(body, Request.class);
+        // do something with the request
         return new Response();
     }
 }
 ```
+
+You can test your lambda after uploading it by running the following command where `request.json` is a file containing
+the json you want to send and `urlToYourLambda` is the functional url created by AWS to your lambda.
+
+``` bash 
+
+curl -X POST \
+     -v \
+     -H "Content-Type: application/json" \
+     -d @request.json \
+     urlToYourLambda
+
+```
+
