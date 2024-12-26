@@ -40,4 +40,5 @@
 * [Amazon Elastic Beanstalk](servlet/amazon/elasticbeanstalk.md)
 * [Amazon Lambda](amazon/aws_lambda.md)
 * [Amazon S3](amazon/aws_s3.md)
+* [Open Street Map](openstreetmap.md)
 * [Neural Network](neural_network.md)
