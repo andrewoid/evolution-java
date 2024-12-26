@@ -74,6 +74,11 @@ Create a Lambda. Give a name Function Name and set the Runtime to Java 21
 
 In the `Code` tab, click the "Upload from" button and find the jar file you created.
 
+In the `Code` tab, click on the "Edit" button under "Runtime Settings". Change the Handler to point to your Lambda
+classname. It should be the fill package and name of your class.
+
+![Runtime Settings](RuntimeSettings.png)
+
 In the `Configuration` tab, create a `Functional URL` and make sure you set the Auth Type to NONE.
 
 ## Testing your Lambda on AWS
