@@ -34,7 +34,7 @@ If the file in S3 is JSON then you can use `Gson` to turn it into an `Object`
 
 ``` java 
 
-        Region region = Region.US_EAST_1;
+        Region region = Region.US_EAST_2;
         S3Client s3Client = S3Client.builder()
                 .region(region)
                 .build();
