@@ -1,6 +1,6 @@
-### Creating a new Java Gradle Project
+## Creating a new Java Gradle Project
 
-1. Create a new project in IntelliJ
+### 1. Create a new project in IntelliJ
 
 ![](new_project.png)
 
@@ -12,7 +12,7 @@ Add a name then choose the following options.
       
       Gradle DSL : Groovy
 
-2. Add these lines to a file called `.gitignore` in the root of your project.
+### 2. Add these lines to a file called `.gitignore` in the root of your project.
 
 ``` gitignore 
 
@@ -25,7 +25,7 @@ build/
 
 ```
 
-3. Download configuration files for how Github handles your project.
+### 3. Download configuration files for how Github handles your project.
 
 ``` bash
 curl -o README.md https://raw.githubusercontent.com/andrewoid/evolution-java/main/git/.github/README.md
@@ -43,7 +43,7 @@ curl -o .github/workflows/checkstyle.xml https://raw.githubusercontent.com/andre
 curl -o .github/pull_request_template.md https://raw.githubusercontent.com/andrewoid/evolution-java/main/git/.github/pull_request_template.md
 ```
 
-4. Open a terminal inside the project (or use the terminal tab in Intellij)
+### 4. Open a terminal inside the project (or use the terminal tab in Intellij)
 
 If this is the first time you are using git, run these commands to identify yourself.
 
@@ -71,18 +71,24 @@ git add .
 git commit -m "initial commit"   
 ```
 
-5. Create a new repository on GitHub
+### 5. Create a new repository on GitHub
 
 ![](git/new_repo.png)
 
-6. Add the repository as a remote with the SSH url (it should start with git@github)
+### 6. Add the repository as a remote with the SSH url (it should start with git@github)
 
 ![](git/ssh_url.png)
 
-7. You can now connect your local git to github. Follow the steps on the github website after creating your repository,
-   or run the code below.
+```bash 
 
-         git remote add origin [ssh url]
-         git push origin main
+git remote add origin [ssh url]
+
+```
+
+### 7. Upload the files to github.
+
+``` bash 
+git push origin main
+```
 
 ### Now you are ready to [start working](git_and_github.md).
