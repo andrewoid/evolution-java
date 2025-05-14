@@ -28,6 +28,8 @@ build/
 ### 3. Download configuration files for how Github handles your project.
 
 ``` bash
+# This file is displayed when you go to your Github at the bottom of the page
+# Edit the *Markdown* file with information on your project
 curl -o README.md https://raw.githubusercontent.com/andrewoid/evolution-java/main/git/.github/README.md
 
 # These directories are user for Github parameters
@@ -42,6 +44,10 @@ curl -o .github/workflows/checkstyle.xml https://raw.githubusercontent.com/andre
 # This file is a template for your PRs.
 curl -o .github/pull_request_template.md https://raw.githubusercontent.com/andrewoid/evolution-java/main/git/.github/pull_request_template.md
 ```
+
+Here is
+a [Markdown tutorial](https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax)
+for writing README.md
 
 ### 4. Open a terminal inside the project (or use the terminal tab in Intellij)
 
