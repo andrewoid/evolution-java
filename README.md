@@ -11,6 +11,7 @@
     * [Windows](quick_command_line_tutorial_-_windows.md)
     * [Mac](quick_command_line_tutorial_-_mac.md)
 * [Git Commands](git/git_commands.md)
+    * [Configure Git]()
     * [Generate SSH Key](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent)
     * [Add SSH Key to GitHub](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/adding-a-new-ssh-key-to-your-github-account?tool=webui)
 * [Configure IntelliJ](intellij/configure_intellij.md)

@@ -12,46 +12,77 @@ Add a name then choose the following options.
       
       Gradle DSL : Groovy
 
-2. Add a [.gitignore](.gitignore) to the root of your project.
+2. Add these lines to a file called `.gitignore` in the root of your project.
 
-3. Create a `.github/workflows/` directory. Copy [java_gradle.yaml](git/.github/workflows/java_gradle.yaml)
-   and [checkstyle.xml](git/.github/workflows/checkstyle.xml) to that directory.
+``` gitignore 
+
+.idea/
+out/
+.gradle/
+build/
+.DS_STORE
+**/apikey.properties
+
+```
+
+3. Download configuration files for how Github handles your project.
 
 ``` bash
+curl -o README.md https://raw.githubusercontent.com/andrewoid/evolution-java/main/git/.github/README.md
+
+# These directories are user for Github parameters
 mkdir -p .github/workflows/
+
+# This file controls running unit tests and checkstyles in PRs
 curl -o .github/workflows/java_gradle.yaml https://raw.githubusercontent.com/andrewoid/evolution-java/main/git/.github/workflows/java_gradle.yaml
+
+# This file controls the style that gets checked by checkstyles.
 curl -o .github/workflows/checkstyle.xml https://raw.githubusercontent.com/andrewoid/evolution-java/main/git/.github/workflows/checkstyle.xml
+
+# This file is a template for your PRs.
+curl -o .github/pull_request_template.md https://raw.githubusercontent.com/andrewoid/evolution-java/main/git/.github/pull_request_template.md
 ```
 
 4. Open a terminal inside the project (or use the terminal tab in Intellij)
 
-        # this makes the project into a git repo
-        git init
+If this is the first time you are using git, run these commands to identify yourself.
 
-        # tell git your name
-        git config --global user.name "FIRST_NAME LAST_NAME"
+``` bash
+# tell git your name
+git config --global user.name "FIRST_NAME LAST_NAME"
 
-        # tell git your email
-        git config user.email "MY_NAME@example.com"
-        
-        # renames master to main
-        git branch -m master main
+# tell git your email
+git config user.email "MY_NAME@example.com"
+```
 
-        # adds all files to git
-        git add .
+Otherwise, continue with these steps.
 
-        # commits all files that have been added
-        git commit -m "initial commit"
+``` bash 
+# this makes the project into a git repo
+git init
+
+# renames master to main
+git branch -m master main
+
+# adds all files to git
+git add .
+
+# commits all files that have been added
+git commit -m "initial commit"   
+```
 
 5. Create a new repository on GitHub
 
-![](new_repo.png)
+![](git/new_repo.png)
 
 6. Add the repository as a remote with the SSH url (it should start with git@github)
 
-![](ssh_url.png)
+![](git/ssh_url.png)
+
+7. You can now connect your local git to github. Follow the steps on the github website after creating your repository,
+   or run the code below.
 
          git remote add origin [ssh url]
          git push origin main
 
-### Now you are ready to start working.
+### Now you are ready to [start working](git_and_github.md).
