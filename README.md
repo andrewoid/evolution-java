@@ -24,6 +24,7 @@
 * [Creating a new Project](new_project.md)
 * [GitHub Actions](github_actions.md)
 * [**Working with Git**](git_and_github.md)
+* [Fixing Merge Conflicts](git_merge_conflicts.md)
 
 #### Topics
 
