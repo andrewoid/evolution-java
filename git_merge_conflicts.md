@@ -4,7 +4,13 @@ When you are not allowed to merge your PR you must handle merge conflicts.
 
 ![blocked](fix_merge_conflicts.png)
 
-While on your branch you are going to pull the changes from `main` into your branch.
+This command must be run once. This tells git how to do the merge.
+
+``` base
+git config pull.rebase false 
+```
+
+While on **your** branch you are going to pull the changes from `main` into your branch.
 
 ``` bash
 git pull origin main
