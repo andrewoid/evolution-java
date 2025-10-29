@@ -10,6 +10,12 @@ This command must be run once. This tells git how to do the merge.
 git config pull.rebase false 
 ```
 
+First you need to make sure you have all the latest changes on all branches.
+
+``` bash 
+git fetch
+```
+
 While on **your** branch you are going to pull the changes from `main` into your branch.
 
 ``` bash
