@@ -4,6 +4,9 @@
 
     implementation 'com.amazonaws:aws-lambda-java-core:1.2.2'
     implementation 'com.amazonaws:aws-lambda-java-events:3.11.1'
+    
+    // this is to turn JSON into Java objects
+    implementation 'com.google.code.gson:gson:2.13.2'
 
 ```
 
