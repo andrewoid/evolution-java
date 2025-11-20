@@ -59,7 +59,8 @@ Then add this to the `plugins` block.
   id 'com.github.johnrengelman.shadow' version '7.1.2'
 ```
 
-Then you can run the `shadowJar` gradle task and create a jar file that has the code and dependencies.
+Then you can run the `shadowJar` gradle task **in the Terminal** and create a jar file that has the code and
+dependencies.
 
 ``` bash 
 ./gradlew shadowJar
