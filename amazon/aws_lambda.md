@@ -10,20 +10,52 @@
 
 ```
 
-`Request` and `Response` are the classes that you create that get sent as and returned as JSON.
+`YourRequest` and `YourResponse` are the classes that you create that get sent as and returned as JSON.
 
 ``` java 
-public class HelloRequestHandler implements RequestHandler<APIGatewayProxyRequestEvent, Response> {
+public class HelloRequestHandler implements RequestHandler<APIGatewayProxyRequestEvent, APIGatewayProxyResponseEvent> {
 
     @Override
-    public Response handleRequest(APIGatewayProxyRequestEvent event, Context context) {
-        String body = event.getBody();
-        Gson gson = new Gson();
-        Request request = gson.fromJson(body, Request.class);
-        // do something with the request
-        return new Response();
+    public APIGatewayProxyResponseEvent handleRequest(APIGatewayProxyRequestEvent event, Context context) {
+        try {
+            // retrieve the body and change json into an object
+            String body = event.getBody();
+            YourRequest request = gson.fromJson(body, YourRequest.class);
+
+            // do something with the request and create a YourResponse
+
+            // create the HTTP response with the DictionaryResponse
+            String responseJson = gson.toJson(response);
+            APIGatewayProxyResponseEvent apiResponse = new APIGatewayProxyResponseEvent();
+            apiResponse.setStatusCode(200);
+            apiResponse.setBody(responseJson);
+            return apiResponse;
+        }
+        catch (Exception e) {
+            // this prints the stack trace to the AWS log file
+            e.printStackTrace();
+
+            // this outputs the stack trace to the client
+            return toResponseEvent(e);
+        }
     }
 }
+```
+
+If an `Exception` occurs in your code you can send the stack trace to the client for debugging purposes.
+
+``` java 
+
+    private APIGatewayProxyResponseEvent toResponseEvent(Exception e) {
+        APIGatewayProxyResponseEvent apiResponse = new APIGatewayProxyResponseEvent();
+        apiResponse.setStatusCode(500);
+        StringWriter stringWriter = new StringWriter();
+        PrintWriter printWriter = new PrintWriter(stringWriter);
+        e.printStackTrace(printWriter);
+        apiResponse.setBody(stringWriter.toString());
+        return apiResponse;
+    }
+
 ```
 
 ## Checkstyles and JSON Variables
