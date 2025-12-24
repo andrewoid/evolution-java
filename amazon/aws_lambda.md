@@ -16,7 +16,7 @@
 public class HelloRequestHandler implements RequestHandler<APIGatewayV2HTTPEvent, APIGatewayV2HTTPResponse> {
 
     @Override
-    public APIGatewayV2HTTPResponse handleRequest(APIGatewayV2HTTPEvent event, Context context)
+    public APIGatewayV2HTTPResponse handleRequest(APIGatewayV2HTTPEvent event, Context context) {
         try {
             // retrieve the body and change json into an object
             String method = event.getRequestContext().getHttp().getMethod();
@@ -47,8 +47,8 @@ If an `Exception` occurs in your code you can send the stack trace to the client
 
 ``` java 
 
-    private APIGatewayProxyResponseEvent toResponseEvent(Exception e) {
-        APIGatewayProxyResponseEvent apiResponse = new APIGatewayProxyResponseEvent();
+    private APIGatewayV2HTTPEvent toResponseEvent(Exception e) {
+        APIGatewayV2HTTPEvent apiResponse = new APIGatewayV2HTTPEvent();
         apiResponse.setStatusCode(500);
         StringWriter stringWriter = new StringWriter();
         PrintWriter printWriter = new PrintWriter(stringWriter);
