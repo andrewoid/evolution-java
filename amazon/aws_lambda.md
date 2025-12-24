@@ -13,12 +13,13 @@
 `YourRequest` and `YourResponse` are the classes that you create that get sent as and returned as JSON.
 
 ``` java 
-public class HelloRequestHandler implements RequestHandler<APIGatewayProxyRequestEvent, APIGatewayProxyResponseEvent> {
+public class HelloRequestHandler implements RequestHandler<APIGatewayV2HTTPEvent, APIGatewayV2HTTPResponse> {
 
     @Override
-    public APIGatewayProxyResponseEvent handleRequest(APIGatewayProxyRequestEvent event, Context context) {
+    public APIGatewayV2HTTPResponse handleRequest(APIGatewayV2HTTPEvent event, Context context)
         try {
             // retrieve the body and change json into an object
+            String method = event.getRequestContext().getHttp().getMethod();
             String body = event.getBody();
             YourRequest request = gson.fromJson(body, YourRequest.class);
 
@@ -26,7 +27,7 @@ public class HelloRequestHandler implements RequestHandler<APIGatewayProxyReques
 
             // create the HTTP response with the DictionaryResponse
             String responseJson = gson.toJson(response);
-            APIGatewayProxyResponseEvent apiResponse = new APIGatewayProxyResponseEvent();
+            APIGatewayV2HTTPResponse apiResponse = new APIGatewayV2HTTPResponse();
             apiResponse.setStatusCode(200);
             apiResponse.setBody(responseJson);
             return apiResponse;
