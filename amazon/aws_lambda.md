@@ -1,19 +1,30 @@
 ### AWS Lambda
 
+AWS documentation:
+
+* [Building Lambda functions with Java](https://docs.aws.amazon.com/lambda/latest/dg/lambda-java.html)
+* [Define a Lambda function handler in Java](https://docs.aws.amazon.com/lambda/latest/dg/java-handler.html)
+* [Deploy Java Lambda functions with .zip or JAR file archives](https://docs.aws.amazon.com/lambda/latest/dg/java-package.html)
+* [Creating and managing Lambda function URLs](https://docs.aws.amazon.com/lambda/latest/dg/urls-configuration.html)
+* [Invoking Lambda function URLs](https://docs.aws.amazon.com/lambda/latest/dg/urls-invocation.html)
+
 ``` groovy 
 
-    implementation 'com.amazonaws:aws-lambda-java-core:1.2.2'
-    implementation 'com.amazonaws:aws-lambda-java-events:3.11.1'
+    implementation 'com.amazonaws:aws-lambda-java-core:1.4.1'
+    implementation 'com.amazonaws:aws-lambda-java-events:3.16.1'
     
     // this is to turn JSON into Java objects
-    implementation 'com.google.code.gson:gson:2.13.2'
+    implementation 'com.google.code.gson:gson:2.15.0'
 
 ```
 
 `YourRequest` and `YourResponse` are the classes that you create that get sent as and returned as JSON.
+See the [Java handler documentation](https://docs.aws.amazon.com/lambda/latest/dg/java-handler.html) for more details.
 
 ``` java 
 public class HelloRequestHandler implements RequestHandler<APIGatewayV2HTTPEvent, APIGatewayV2HTTPResponse> {
+
+    private final Gson gson = new Gson();
 
     @Override
     public APIGatewayV2HTTPResponse handleRequest(APIGatewayV2HTTPEvent event, Context context) {
@@ -25,7 +36,7 @@ public class HelloRequestHandler implements RequestHandler<APIGatewayV2HTTPEvent
 
             // do something with the request and create a YourResponse
 
-            // create the HTTP response with the DictionaryResponse
+            // create the HTTP response with the YourResponse
             String responseJson = gson.toJson(response);
             APIGatewayV2HTTPResponse apiResponse = new APIGatewayV2HTTPResponse();
             apiResponse.setStatusCode(200);
@@ -47,8 +58,8 @@ If an `Exception` occurs in your code you can send the stack trace to the client
 
 ``` java 
 
-    private APIGatewayV2HTTPEvent toResponseEvent(Exception e) {
-        APIGatewayV2HTTPEvent apiResponse = new APIGatewayV2HTTPEvent();
+    private APIGatewayV2HTTPResponse toResponseEvent(Exception e) {
+        APIGatewayV2HTTPResponse apiResponse = new APIGatewayV2HTTPResponse();
         apiResponse.setStatusCode(500);
         StringWriter stringWriter = new StringWriter();
         PrintWriter printWriter = new PrintWriter(stringWriter);
@@ -73,23 +84,12 @@ comments.
 ## Uploading to AWS Lambda
 
 You need to create a jar file of your code that has all the dependencies in it. This is known as a "fat jar".
+See [Deploy Java Lambda functions with .zip or JAR file archives](https://docs.aws.amazon.com/lambda/latest/dg/java-package.html).
 
-Copied from https://www.baeldung.com/gradle-fat-jar
-
-In build.gradle put this at the **top** of the file.
-
-``` groovy
-buildscript {
-    dependencies {
-        classpath "gradle.plugin.com.github.johnrengelman:shadow:7.1.2"
-    }
-}
-```
-
-Then add this to the `plugins` block.
+Add this to the `plugins` block in `build.gradle`.
 
 ``` groovy
-  id 'com.github.johnrengelman.shadow' version '7.1.2'
+  id 'com.gradleup.shadow' version '8.3.11'
 ```
 
 Then you can run the `shadowJar` gradle task **in the Terminal** and create a jar file that has the code and
@@ -105,23 +105,23 @@ This will create a jar file in `build/libs/`
 
 ![Create Lambda](CreateLambda.png)
 
-Create a Lambda. Give a name Function Name and set the Runtime to Java 21
+Create a Lambda. Give it a Function Name and set the Runtime to Java 21
 
 ![Upload From](Upload.png)
 
 In the `Code` tab, click the "Upload from" button and find the jar file you created.
 
 In the `Code` tab, click on the "Edit" button under "Runtime Settings". Change the Handler to point to your Lambda
-classname. It should be the fill package and name of your class.
+classname. It should be the full package and name of your class.
 
 ![Runtime Settings](RuntimeSettings.png)
 
-In the `Configuration` tab, create a `Functional URL` and make sure you set the Auth Type to NONE.
+In the `Configuration` tab, create a [`Function URL`](https://docs.aws.amazon.com/lambda/latest/dg/urls-configuration.html) and make sure you set the Auth Type to NONE.
 
 ## Testing your Lambda on AWS
 
 You can test your lambda after uploading it by running the following command where `request.json` is a file containing
-the json you want to send and `urlToYourLambda` is the functional url created by AWS to your lambda.
+the json you want to send and `urlToYourLambda` is the [function url](https://docs.aws.amazon.com/lambda/latest/dg/urls-invocation.html) created by AWS to your lambda.
 
 ``` bash 
 
