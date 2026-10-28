@@ -29,8 +29,11 @@ public class HelloRequestHandler implements RequestHandler<APIGatewayV2HTTPEvent
     @Override
     public APIGatewayV2HTTPResponse handleRequest(APIGatewayV2HTTPEvent event, Context context) {
         try {
-            // retrieve the body and change json into an object
+            // retrieve the HTTP method, query parameters, and body
             String method = event.getRequestContext().getHttp().getMethod();
+            Map<String, String> queryParams = event.getQueryStringParameters();
+            // example: /hello?name=Ada  ->  queryParams.get("name") returns "Ada"
+            // queryParams is null if the request has no query parameters
             String body = event.getBody();
             YourRequest request = gson.fromJson(body, YourRequest.class);
 
