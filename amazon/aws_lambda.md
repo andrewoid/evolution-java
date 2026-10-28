@@ -132,3 +132,48 @@ curl -X POST \
      urlToYourLambda
 
 ```
+
+## Uploading / Updating your Lambda from the command line
+
+You can upload or update your Lambda using the [AWS CLI](https://docs.aws.amazon.com/cli/latest/userguide/getting-started-install.html)
+instead of the console. First rebuild the fat jar:
+
+``` bash
+./gradlew shadowJar
+```
+
+Replace `yourFunctionName` with the name of your Lambda and
+`build/libs/your-project-1.0-SNAPSHOT-all.jar` with the path to the jar in `build/libs/`.
+
+### Update an existing Lambda
+
+If you already created the Lambda in the console, use
+[`update-function-code`](https://docs.aws.amazon.com/cli/latest/reference/lambda/update-function-code.html)
+to upload a new jar:
+
+``` bash
+aws lambda update-function-code \
+    --function-name yourFunctionName \
+    --zip-file fileb://build/libs/your-project-1.0-SNAPSHOT-all.jar
+```
+
+### Create a new Lambda
+
+To create the Lambda from the command line, use
+[`create-function`](https://docs.aws.amazon.com/cli/latest/reference/lambda/create-function.html).
+You need an [IAM execution role](https://docs.aws.amazon.com/lambda/latest/dg/lambda-intro-execution-role.html)
+ARN for `--role`, and the handler must be the full package and class name of your
+`RequestHandler`.
+
+``` bash
+aws lambda create-function \
+    --function-name yourFunctionName \
+    --runtime java21 \
+    --handler com.example.HelloRequestHandler \
+    --role arn:aws:iam::123456789012:role/your-lambda-role \
+    --zip-file fileb://build/libs/your-project-1.0-SNAPSHOT-all.jar
+```
+
+After creating the function, still create a Function URL in the console (or with
+[`create-function-url-config`](https://docs.aws.amazon.com/cli/latest/reference/lambda/create-function-url-config.html))
+and set the Auth Type to NONE.
